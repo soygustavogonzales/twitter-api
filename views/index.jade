@@ -1,0 +1,23 @@
+extends layout
+
+block content
+		h1| Who is more famous on twitter?
+		.demo-content
+			div(ng-controller="ctrlListTwitts")
+				.twitts-box
+						md-input-container
+							label|buscar ya
+							input(ng-model="cat1",ng-keyup="find(cat1,$event,'twitts1')")
+						md-content.md-default-theme
+							md-list.md-default-theme
+								md-list-item.md-3-line(ng-repeat="twitt in lists.twitts1 track by $index")
+									div.md-list-item-text|{{twitt}}
+				.twitts-box
+						md-input-container
+							label|buscar ya
+							input(ng-model="cat2",ng-keyup="find(cat2,$event,'twitts2')")
+						md-content.md-default-theme
+							md-list.md-default-theme
+								md-list-item.md-3-line(ng-repeat="twitt in lists.twitts2 track by $index")
+									div.md-list-item-text|{{twitt}}
+				drv-chart

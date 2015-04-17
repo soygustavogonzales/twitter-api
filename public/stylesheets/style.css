@@ -1,0 +1,64 @@
+
+*{
+	font-family: 'Lekton', sans-serif;
+}
+
+.twitts-box{
+	width: 350px;
+	display: inline-block;
+}
+md-content::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+md-content::-webkit-scrollbar
+{
+	width: .2em;
+	margin-right: .3em;
+	background-color: transparent;
+}
+
+md-content::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: rgba(140,140,140,.9);
+}
+
+md-content {
+	overflow-x:hidden !important; 
+	background: #f1f2f3;
+	counter-reset:section;
+	height: 400px; 
+	box-shadow: inset 0 0 .5em rgba(250,250,250,.8)
+}
+
+md-content md-list-item > div{
+	margin:.2em 0 .2em 0;
+	border: .006em solid #9f9;
+	padding: .2em .4em;
+	background: #f9f9f9;
+	-webkit-filter:blur(.105em);
+	transform-origin:50% 50%;
+	transform:perspective(20em) translateZ(-1.2em) rotateX(0deg);
+	transition:all .15s ease;
+}
+md-content md-list-item:hover > div{
+	box-shadow: .15em .1005em .2em gray;
+	-webkit-filter:blur(0em);
+	transform-origin:50% 50%;
+	transform:perspective(20em) translateY(-.26em) translateZ(1.5em) rotateX(10deg);
+	cursor: -webkit-zoom-in;
+	z-index: 1;
+}
+
+md-list > md-list-item > .md-list-item-text:before {
+	counter-increment: section;
+	content: counter(section);
+	border-radius:50%;
+	background: rgba(30,30,30,.8);
+	padding: .1em .4em;
+	margin:0 .3em 0 0;
+	color: white;
+}
