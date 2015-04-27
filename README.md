@@ -1,6 +1,6 @@
 #First step: clone this repository.
 
-$ git clone twitter
+$ git clone https://github.com/soygustavogonzales/twitter-api.git
 
 #Second step: install dependencies.
 
