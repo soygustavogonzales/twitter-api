@@ -6,7 +6,7 @@ $ git clone https://github.com/soygustavogonzales/twitter-api.git
 
 $ npm install
 
-#Thirty step: Run application.
+#Third step: Run application.
 
 $ npm start
 
